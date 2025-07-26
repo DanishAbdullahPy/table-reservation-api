@@ -1,0 +1,115 @@
+ 
+{
+  "info": {
+    "name": "Table Reservation Lock API",
+    "description": "Complete test suite for table reservation locking system",
+    "version": "1.0.0"
+  },
+  "item": [
+    {
+      "name": "Health Check",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/health",
+          "host": ["{{baseUrl}}"],
+          "path": ["health"]
+        }
+      }
+    },
+    {
+      "name": "Lock Table - Success",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"tableId\": \"table-123\",\n  \"userId\": \"user-abc\",\n  \"duration\": 600\n}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/api/tables/lock",
+          "host": ["{{baseUrl}}"],
+          "path": ["api", "tables", "lock"]
+        }
+      }
+    },
+    {
+      "name": "Lock Table - Already Locked",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"tableId\": \"table-123\",\n  \"userId\": \"user-xyz\",\n  \"duration\": 300\n}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/api/tables/lock",
+          "host": ["{{baseUrl}}"],
+          "path": ["api", "tables", "lock"]
+        }
+      }
+    },
+    {
+      "name": "Check Table Status - Locked",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/tables/table-123/status",
+          "host": ["{{baseUrl}}"],
+          "path": ["api", "tables", "table-123", "status"]
+        }
+      }
+    },
+    {
+      "name": "Unlock Table - Success",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"tableId\": \"table-123\",\n  \"userId\": \"user-abc\"\n}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/api/tables/unlock",
+          "host": ["{{baseUrl}}"],
+          "path": ["api", "tables", "unlock"]
+        }
+      }
+    },
+    {
+      "name": "Check Table Status - Unlocked",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/tables/table-123/status",
+          "host": ["{{baseUrl}}"],
+          "path": ["api", "tables", "table-123", "status"]
+        }
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:3000"
+    }
+  ]
+}
