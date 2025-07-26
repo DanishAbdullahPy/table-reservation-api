@@ -1,7 +1,7 @@
-🔒 Table Reservation Lock API
+##Table Reservation Lock API
 This project implements a simple RESTful API designed to manage temporary table availability by "locking" a table while a user completes their booking. This mechanism is crucial for preventing simultaneous double-bookings, ensuring a smooth reservation process.
 
-🎯 The Scenario
+##The Scenario
 To manage table availability effectively, a system is required to temporarily "lock" a table while a user completes their booking. This mechanism is crucial for preventing simultaneous double-bookings of the same table. This API provides the core logic for this functionality.
 
 ✨ Features
