@@ -1,7 +1,7 @@
-##Table Reservation Lock API
+🔒 Table Reservation Lock API
 This project implements a simple RESTful API designed to manage temporary table availability by "locking" a table while a user completes their booking. This mechanism is crucial for preventing simultaneous double-bookings, ensuring a smooth reservation process.
 
-##The Scenario
+🎯 The Scenario
 To manage table availability effectively, a system is required to temporarily "lock" a table while a user completes their booking. This mechanism is crucial for preventing simultaneous double-bookings of the same table. This API provides the core logic for this functionality.
 
 ✨ Features
@@ -187,10 +187,12 @@ expiryTimestamp: A Unix timestamp (in milliseconds) indicating when the lock wil
 
 The system periodically cleans up expired locks (though for an in-memory solution, a simple check on access is sufficient, a background cleanup could be added for larger scale).
 
-✅ Deliverables & Assessment
-This project aims to satisfy the following deliverables and assessment criteria:
+
+Deliverables
+GitHub Repository: A publicly accessible GitHub repository containing this Node.js/Express project.
+
 
 
 Postman Collection: A Postman collection detailing and demonstrating the testing procedures for each endpoint.
-link:- https://solar-escape-338173.postman.co/workspace/Team-Workspace~e1e40a3e-06ae-42e0-86d6-39317a866608/collection/38806499-7879b07d-b5a0-42f5-a0e2-303be7835c98?action=share&creator=38806499&active-environment=38806499-4ed36486-e61a-4666-8efb-6c606d61f328
 
+Postman Collection Link - https://solar-escape-338173.postman.co/workspace/Team-Workspace~e1e40a3e-06ae-42e0-86d6-39317a866608/collection/38806499-7879b07d-b5a0-42f5-a0e2-303be7835c98?action=share&creator=38806499&active-environment=38806499-4ed36486-e61a-4666-8efb-6c606d61f328
