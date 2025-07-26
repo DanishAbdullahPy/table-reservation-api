@@ -278,21 +278,6 @@ NODE_ENV=development         # Environment mode
 - **Security Headers**: Helmet.js implementation
 - **Authorization**: User ownership verification
 
-## 📈 Production Considerations
-
-### Current Limitations
-- **In-Memory Storage**: Data lost on server restart
-- **Single Instance**: No distributed locking mechanism
-- **No Persistence**: Suitable for development/testing only
-
-### Production Upgrades
-For production deployment, consider:
-- **Redis**: For distributed, persistent locking
-- **Database Integration**: PostgreSQL/MongoDB for data persistence
-- **Load Balancing**: Multiple server instances
-- **Monitoring**: APM tools integration
-- **Authentication**: JWT-based user authentication
-- **Rate Limiting**: Request throttling implementation
 
 ## 📋 Deliverables
 
@@ -301,23 +286,3 @@ For production deployment, consider:
 - ✅ **Documentation**: Detailed API documentation and setup guide
 - ✅ **Production Ready**: Error handling, validation, and security features
 
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add some amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
-## 📄 License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-## 🎉 Acknowledgments
-
-- Built as part of a backend developer assessment
-- Demonstrates RESTful API design principles
-- Showcases Node.js/Express.js best practices
-- Implements production-ready error handling and validation
-
-**🚀 Ready to prevent double-bookings and manage table reservations efficiently!**
